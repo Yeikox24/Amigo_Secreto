@@ -28,3 +28,13 @@ for (let i = 0; i < amigos.length; i++) {
     }
 }
 
+function sortearAmigo(){
+    if (amigos.length <= 1){
+        alert("Necesitas ingresar al menos a 2 amigos para el sorteo.");
+       
+    } else {
+        let numeroAleatorio = Math.floor(Math.random() * amigos.length);
+        let amigoSorteado = amigos[numeroAleatorio];
+        let resultado = document.getElementById("resultado");
+        resultado.innerHTML = `<li>El amigo sorteado es: <strong>${amigoSorteado}</strong></li>`;
+    }}
